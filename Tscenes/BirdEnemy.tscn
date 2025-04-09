@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6177yg3dsy6g"]
+
+[ext_resource type="Texture2D" uid="uid://b1itm0ajju0qp" path="res://Assets/Idle Enemy.png" id="1_7gunu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haac5"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(0, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y71j"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(40, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpi3x"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(80, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sxw0"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(120, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pi8u"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(160, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0anov"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(200, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_niyo4"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(240, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jeag"]
+atlas = ExtResource("1_7gunu")
+region = Rect2(280, 0, 40, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcc58"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haac5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0y71j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpi3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sxw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pi8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0anov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_niyo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jeag")
+}],
+"loop": true,
+"name": &"birb",
+"speed": 120.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_alsqh"]
+radius = 37.0
+height = 100.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1207, 344)
+scale = Vector2(2.4125, 2.00266)
+sprite_frames = SubResource("SpriteFrames_fcc58")
+animation = &"birb"
+autoplay = "birb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1205, 347)
+shape = SubResource("CapsuleShape2D_alsqh")

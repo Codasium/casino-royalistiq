@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn0fagw6cjov0"]
+
+[ext_resource type="Texture2D" uid="uid://dosehdnyoiwmt" path="res://Assets/End (Idle).png" id="1_ax0m2"]
+[ext_resource type="Script" path="res://Game Items/FinishLvl2.gd" id="2_vpb7y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtoft"]
+radius = 26.9258
+
+[node name="FinishLvl2" type="Sprite2D"]
+position = Vector2(111, 143)
+texture = ExtResource("1_ax0m2")
+script = ExtResource("2_vpb7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8)
+shape = SubResource("CircleShape2D_jtoft")

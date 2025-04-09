@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://veui63k83mya"]
+
+[ext_resource type="Script" path="res://Game Items/DeFinish.gd" id="1_2bujv"]
+[ext_resource type="Texture2D" uid="uid://dosehdnyoiwmt" path="res://Assets/End (Idle).png" id="1_fevee"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fi20y"]
+radius = 54.0
+height = 138.0
+
+[node name="FInish" type="Area2D"]
+texture_filter = 1
+position = Vector2(170, 91)
+script = ExtResource("1_2bujv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, -28)
+scale = Vector2(2.125, 2.54688)
+texture = ExtResource("1_fevee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, -5)
+shape = SubResource("CapsuleShape2D_fi20y")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

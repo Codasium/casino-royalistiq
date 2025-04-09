@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://dxj3iphaknfut"]
+
+[ext_resource type="Script" path="res://Tscenes/enemy.gd" id="1_154ky"]
+[ext_resource type="Texture2D" uid="uid://b1itm0ajju0qp" path="res://Assets/Idle Enemy.png" id="1_k6632"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ticem"]
+atlas = ExtResource("1_k6632")
+region = Rect2(0, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv0gr"]
+atlas = ExtResource("1_k6632")
+region = Rect2(40, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk7mx"]
+atlas = ExtResource("1_k6632")
+region = Rect2(80, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssixb"]
+atlas = ExtResource("1_k6632")
+region = Rect2(120, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qu6f"]
+atlas = ExtResource("1_k6632")
+region = Rect2(160, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwkcf"]
+atlas = ExtResource("1_k6632")
+region = Rect2(200, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqe75"]
+atlas = ExtResource("1_k6632")
+region = Rect2(240, 0, 40, 47)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_823ae"]
+atlas = ExtResource("1_k6632")
+region = Rect2(280, 0, 40, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x376w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ticem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv0gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk7mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssixb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qu6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwkcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqe75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_823ae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 100.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3uox"]
+size = Vector2(82, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rc4f"]
+size = Vector2(92.75, 93)
+
+[node name="Enemey" type="RigidBody2D"]
+script = ExtResource("1_154ky")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, 47)
+scale = Vector2(2.4, 2.03723)
+sprite_frames = SubResource("SpriteFrames_x376w")
+autoplay = "default"
+frame_progress = 0.829833
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(49, 50.5)
+shape = SubResource("RectangleShape2D_q3uox")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(47, 51)
+shape = SubResource("RectangleShape2D_7rc4f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
