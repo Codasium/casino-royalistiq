@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-#variabelen voor snelheid, spronghoogte en het variabel van de sprite die voor de speler gebruikt wordt
+#variabelen voor snelheid, springhoogte en het variabel van de sprite die voor de speler gebruikt wordt
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D

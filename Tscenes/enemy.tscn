@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dxj3iphaknfut"]
 
-[ext_resource type="Script" path="res://Tscenes/enemy.gd" id="1_154ky"]
+[ext_resource type="Script" path="res://Game Items/enemy.gd" id="1_154ky"]
 [ext_resource type="Texture2D" uid="uid://b1itm0ajju0qp" path="res://Assets/Idle Enemy.png" id="1_k6632"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ticem"]

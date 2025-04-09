@@ -14,7 +14,7 @@ func decrease_health():
 		else:
 			hearts[h].hide()
 	if (levens == 0):
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://Tscenes/Game_Over_Screen.tscn")
 
 func GetPoints():
 	points += 1
