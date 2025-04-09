@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://djqfni55iw2vn"]
+
+[ext_resource type="Script" path="res://lavaCollision.gd" id="1_kf8v1"]
+[ext_resource type="Texture2D" uid="uid://culr2y8702xk" path="res://Arthur.jpg" id="1_nom30"]
+[ext_resource type="Script" path="res://lavaSprite.gd" id="2_korwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q16wx"]
+
+[node name="Lava" type="StaticBody2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.175, 0.25)
+texture = ExtResource("1_nom30")
+script = ExtResource("2_korwg")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_kf8v1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(6.28, 6.32)
+shape = SubResource("RectangleShape2D_q16wx")

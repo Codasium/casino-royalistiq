@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://co4rkd2opk05h"]
+
+[ext_resource type="PackedScene" uid="uid://7r7o73ulvjxa" path="res://vloer.tscn" id="1_syh1f"]
+[ext_resource type="PackedScene" uid="uid://ba46kulewul0m" path="res://player.tscn" id="2_1jdsw"]
+[ext_resource type="Script" path="res://followPlayer.gd" id="3_q010o"]
+[ext_resource type="PackedScene" uid="uid://djqfni55iw2vn" path="res://lava.tscn" id="4_dqtut"]
+[ext_resource type="PackedScene" uid="uid://0mykis2a6rqq" path="res://finish.tscn" id="5_jyx28"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(428, 126)
+
+[node name="vloer" parent="." instance=ExtResource("1_syh1f")]
+position = Vector2(1042, -13)
+scale = Vector2(2.08, 1)
+
+[node name="vloer2" parent="." instance=ExtResource("1_syh1f")]
+position = Vector2(-457, -13)
+scale = Vector2(2.08, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_1jdsw")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-115, -10)
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("3_q010o")
+
+[node name="Lava" parent="." instance=ExtResource("4_dqtut")]
+position = Vector2(377, 368)
+scale = Vector2(3.88, 1)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("5_jyx28")]
+position = Vector2(1516, 57)

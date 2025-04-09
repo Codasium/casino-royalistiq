@@ -6,71 +6,71 @@
 [ext_resource type="PackedScene" uid="uid://7r7o73ulvjxa" path="res://vloer.tscn" id="4_vo07v"]
 
 [node name="Plinko" type="Node2D"]
-position = Vector2(5, -10)
+position = Vector2(5, -5)
 script = ExtResource("1_i6hjn")
 
 [node name="Ball2" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-640, 1270)
+position = Vector2(-640, 1127)
 
 [node name="Ball3" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(0, 1270)
+position = Vector2(0, 1127)
 
 [node name="Ball4" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(305, 1270)
+position = Vector2(315, 1127)
 
 [node name="Ball5" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(615, 1270)
+position = Vector2(635, 1127)
 
 [node name="Ball6" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(460, 1000)
+position = Vector2(475, 906)
 
 [node name="Ball7" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(150, 1000)
+position = Vector2(155, 906)
 
 [node name="Ball8" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-160, 1000)
+position = Vector2(-160, 906)
 
 [node name="Ball19" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(150, 460)
+position = Vector2(155, 462)
 
 [node name="Ball20" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-160, 460)
+position = Vector2(-160, 462)
 
 [node name="Ball9" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-480, 1000)
+position = Vector2(-480, 906)
 
 [node name="Ball" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-320, 1270)
+position = Vector2(-320, 1127)
 
 [node name="Ball16" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(0, 730)
+position = Vector2(0, 684)
 
 [node name="Ball21" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(0, 190)
+position = Vector2(0, 240)
 
 [node name="Ball17" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(305, 730)
+position = Vector2(315, 684)
 
 [node name="Ball18" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-320, 730)
+position = Vector2(-320, 684)
 
 [node name="Ball10" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-800, 1540)
+position = Vector2(-800, 1348)
 
 [node name="Ball11" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-160, 1540)
+position = Vector2(-160, 1348)
 
 [node name="Ball12" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(150, 1540)
+position = Vector2(155, 1348)
 
 [node name="Ball13" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(460, 1540)
+position = Vector2(475, 1348)
 
 [node name="Ball15" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(770, 1540)
+position = Vector2(795, 1348)
 
 [node name="Ball14" parent="." instance=ExtResource("2_3bmoj")]
-position = Vector2(-480, 1540)
+position = Vector2(-480, 1348)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-425, 331)
@@ -85,11 +85,11 @@ position = Vector2(2795, -117)
 scale = Vector2(0.200002, 1)
 
 [node name="vloer5" parent="." instance=ExtResource("4_vo07v")]
-position = Vector2(1113, 1575)
+position = Vector2(1113, 1043)
 scale = Vector2(0.200002, 1)
 
 [node name="vloer6" parent="." instance=ExtResource("4_vo07v")]
-position = Vector2(-1177, 1585)
+position = Vector2(-1177, 1053)
 scale = Vector2(0.200002, 1)
 
 [node name="vloer2" parent="." instance=ExtResource("4_vo07v")]
@@ -101,5 +101,5 @@ position = Vector2(2630, 347)
 scale = Vector2(0.600001, 0.16)
 
 [node name="vloer4" parent="." instance=ExtResource("4_vo07v")]
-position = Vector2(-148, 2008)
+position = Vector2(-148, 1476)
 scale = Vector2(5.34939, 0.256207)
