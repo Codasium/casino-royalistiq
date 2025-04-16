@@ -4,28 +4,42 @@ extends CharacterBody2D
 #variabelen voor snelheid, springhoogte en het variabel van de sprite die voor de speler gebruikt wordt
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
-@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@onready var sprite_2d = $Sprite2D
+@export var particle : PackedScene
+
+var jump_count = 0
+
 
 func Bounce():
 	velocity.y = JUMP_VELOCITY
+	spawn_particle()
 func damaged(x):
 	velocity.y = JUMP_VELOCITY
 	velocity.x = x
 
-func _physics_process(delta: float) -> void:
-	if (velocity.x > 0 || velocity.x < 0):
-		sprite_2d.animation = "running"
-	else:
-		sprite_2d.animation = "default"
-	
+func _physics_process(delta): 
 	# Add the gravity.
-	if not is_on_floor():
+	if is_on_floor():
+		jump_count = 0
+		
+		if (velocity.x > 1 || velocity.x < -1):
+			sprite_2d.animation = "running"
+		else:
+			sprite_2d.animation = "default"
+	
+	else:
 		velocity += get_gravity() * delta
-		sprite_2d.animation = "jumping"
+		if (jump_count == 2):
+			sprite_2d.animation = "Double_jump"
+		else:
+			sprite_2d.animation = "jumping"
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and jump_count < 2:
 		velocity.y = JUMP_VELOCITY
+		jump_count += 1
+		if (jump_count == 2):
+			spawn_particle()
 
 
 	var direction := Input.get_axis("left", "right")
@@ -35,6 +49,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0,35)
 
 	move_and_slide()
-	
+	if (velocity.x == 0):
+		return;
+		
 	var isLeft = velocity.x < 0
 	sprite_2d.flip_h = isLeft
+	
+func spawn_particle():
+	var particle_node = particle.instantiate()
+	particle_node.position = position + Vector2(0, 400)
+	get_parent().add_child(particle_node)
+	await get_tree().create_timer(0.3).timeout
+	particle_node.queue_free()

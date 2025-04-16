@@ -1,7 +1,7 @@
 extends RigidBody2D
 @onready var gamemanager: Node = %Gamemanager
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D):
 	if (body.name == "CharacterBody2D"):
 		var y_delta = position.y - body.position.y
 		var x_delta = body.position.x - position.x
