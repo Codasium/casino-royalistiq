@@ -19,4 +19,4 @@ func decrease_health():
 func GetPoints():
 	points += 1
 	print(points)
-	label.text = "Punten: "+ str(points)
+	label.text = str(points) + " x"

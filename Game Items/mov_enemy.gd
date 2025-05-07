@@ -5,14 +5,14 @@ extends RigidBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
  	
 
-const SPEED = 60
+const SPEED = 400
 var direction = 1
 
 func _on_area_2d_body_entered(body: Node2D):
 	if (body.name == "CharacterBody2D"):
 		var y_delta = position.y - body.position.y
 		var x_delta = body.position.x - position.x
-		if (y_delta > 215):
+		if (y_delta > 390):
 			queue_free()
 			body.Bounce()
 		else:

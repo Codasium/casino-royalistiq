@@ -1,56 +1,84 @@
-[gd_scene load_steps=11 format=3 uid="uid://bi03cm1ow3n02"]
+[gd_scene load_steps=15 format=3 uid="uid://bi03cm1ow3n02"]
 
 [ext_resource type="Script" path="res://Tscenes/spring.gd" id="1_hif7l"]
 [ext_resource type="Texture2D" uid="uid://bvb6xfdcmx6he" path="res://Assets/pixilart-sprite.png" id="1_v7oot"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jrush"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o8k0"]
 atlas = ExtResource("1_v7oot")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_48q65"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ipri"]
 atlas = ExtResource("1_v7oot")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pglhl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g456n"]
 atlas = ExtResource("1_v7oot")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_otqdh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7yln"]
 atlas = ExtResource("1_v7oot")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iryv5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi2vm"]
 atlas = ExtResource("1_v7oot")
 region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpl6h"]
+atlas = ExtResource("1_v7oot")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d35mn"]
+atlas = ExtResource("1_v7oot")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py2w0"]
+atlas = ExtResource("1_v7oot")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aplaq"]
+atlas = ExtResource("1_v7oot")
+region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cobeb"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jrush")
+"texture": SubResource("AtlasTexture_3o8k0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_48q65")
+"texture": SubResource("AtlasTexture_3ipri")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pglhl")
+"texture": SubResource("AtlasTexture_g456n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_otqdh")
+"texture": SubResource("AtlasTexture_c7yln")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iryv5")
+"texture": SubResource("AtlasTexture_qi2vm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpl6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d35mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py2w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aplaq")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 17.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0tks"]
 size = Vector2(83, 57.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fho0s"]
-size = Vector2(93.625, 28)
+size = Vector2(93.625, 31)
 
 [node name="Spring" type="RigidBody2D"]
 script = ExtResource("1_hif7l")
@@ -60,6 +88,8 @@ texture_filter = 1
 position = Vector2(49.5, 6.5)
 scale = Vector2(3.53125, 2.96875)
 sprite_frames = SubResource("SpriteFrames_cobeb")
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(46, 18)
@@ -68,7 +98,7 @@ shape = SubResource("RectangleShape2D_f0tks")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(46, 2)
+position = Vector2(46, 0.5)
 shape = SubResource("RectangleShape2D_fho0s")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

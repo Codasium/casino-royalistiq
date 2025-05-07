@@ -246,7 +246,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 15.0
+"speed": 30.0
 }, {
 "frames": [],
 "loop": true,
@@ -258,7 +258,7 @@ animations = [{
 radius = 19.0
 height = 38.0
 
-[node name="Area2D" type="Area2D"]
+[node name="Appel" type="Area2D"]
 position = Vector2(46, 54)
 script = ExtResource("1_7dkhg")
 
@@ -267,6 +267,7 @@ texture_filter = 1
 position = Vector2(-2, 5)
 scale = Vector2(2.90625, 2.90625)
 sprite_frames = SubResource("SpriteFrames_kt05w")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 3)

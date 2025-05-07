@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Game Items/vallen.gd" id="7_l24n2"]
 [ext_resource type="PackedScene" uid="uid://bjfjo4o1k4lmw" path="res://Tscenes/Fruit.tscn" id="7_ss685"]
 [ext_resource type="PackedScene" uid="uid://dxj3iphaknfut" path="res://Tscenes/enemy.tscn" id="13_tlbck"]
-[ext_resource type="PackedScene" uid="uid://bivbbyrth0380" path="res://Mov_Enemy.tscn" id="14_7eaf0"]
+[ext_resource type="PackedScene" uid="uid://bivbbyrth0380" path="res://Tscenes/Mov_Enemy.tscn" id="14_7eaf0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atvyr"]
 texture = ExtResource("4_prbu1")
@@ -463,7 +463,7 @@ layer_0/tile_data = PackedInt32Array(786432, 458752, 4, 786433, 458752, 4, 78643
 
 [node name="CharacterBody2D" parent="Scene" instance=ExtResource("5_0v3s8")]
 unique_name_in_owner = true
-position = Vector2(42.0001, 89)
+position = Vector2(769, -152)
 
 [node name="Camera2D" type="Camera2D" parent="Scene/CharacterBody2D"]
 position = Vector2(20, 461.25)

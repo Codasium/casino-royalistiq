@@ -1,5 +1,6 @@
 extends Area2D
 @export var target_level : PackedScene
+@onready var gamemanager: Node = %Gamemanager
 
 func _on_body_entered(body: Node2D):
 	if (body.name == "CharacterBody2D"):

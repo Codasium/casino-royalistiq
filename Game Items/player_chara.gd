@@ -1,14 +1,13 @@
 extends CharacterBody2D
 
-
 #variabelen voor snelheid, springhoogte en het variabel van de sprite die voor de speler gebruikt wordt
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
+
 @onready var sprite_2d = $Sprite2D
 @export var particle : PackedScene
-
 var jump_count = 0
-
+var GroteJongen = false
 
 func Bounce():
 	velocity.y = JUMP_VELOCITY
@@ -61,3 +60,11 @@ func spawn_particle():
 	get_parent().add_child(particle_node)
 	await get_tree().create_timer(0.3).timeout
 	particle_node.queue_free()
+	
+func WordtGroot():
+	GroteJongen = true
+	self.scale = Vector2(1.008, 1.008)
+
+func NormaleJongen():
+	GroteJongen = false
+	self.scale = Vector2(0.8, 0.8)
