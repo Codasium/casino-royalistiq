@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://6rlsgmaffic7"]
 
 [ext_resource type="Texture2D" uid="uid://b074kmxrxlib2" path="res://Assets/Item Block.png" id="1_2aq4x"]
-[ext_resource type="Script" path="res://Tscenes/item_block.gd" id="1_i6do8"]
+[ext_resource type="Script" path="res://Game Items/item_block.gd" id="1_i6do8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxnsd"]
 size = Vector2(36, 10)

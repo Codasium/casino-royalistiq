@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://b6s4f7ixr6puc"]
 
 [ext_resource type="Texture2D" uid="uid://cvru1oqykj787" path="res://Assets/Kiwi.png" id="1_hiyee"]
-[ext_resource type="Script" path="res://Tscenes/kiwi.gd" id="1_lx0g3"]
+[ext_resource type="Script" path="res://kiwi.gd" id="1_lx0g3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ciuwn"]
 atlas = ExtResource("1_hiyee")

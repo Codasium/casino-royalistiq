@@ -2,7 +2,7 @@ extends RigidBody2D
 @onready var character_body_2d: CharacterBody2D = %CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-const JUMP_VELOCITY = -900.0
+const JUMP_VELOCITY = -2000.0
 
 func spring():
 	character_body_2d.velocity.y = JUMP_VELOCITY
